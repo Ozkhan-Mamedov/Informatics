@@ -9,67 +9,54 @@ int getYesNo (char* question) {
     return 0;
 }
 
-void func () {
-    int b=getYesNo ("Yes or no?");
-    if (b==1)
-    {
-        puts ("yes yes");
+void cycle () {
+    int indicator = 0;
+    while (indicator == 0) {
+        puts ("U menya dlya tebya plohie novosti");
+        int answer4 = getYesNo("Mojesh svalit vinu na drugogo?");
+        if (answer4==1) {
+            indicator = 1;
+        }
+        else {
+            indicator = 0;
+        }
     }
 }
 
-int main(int argc, char *argv[])
-{
-    int a = getYesNo ("Est' problemi?");
-    if (a==1)
-    {
-        int c=getYesNo("Ti tut zameshan?");
-        if (c==1)
-            puts("Ne stoilo etogo delat'");
-        else {
-            int f=getYesNo("Na tebya eto povesili?");
-            int count =0;
-            while (count == 0) {
+void func1 () {
+    puts("Ne stoilo etogo delat");
+    int answer3 = getYesNo ("Kto-nibud ob etom znaet?");
+    if (answer3==1) {
+        cycle ();
+    }
+    else {
+        puts("Ne govori nikomu");
+    }
+}
 
+void func2 () {
+    int answer5 = getYesNo("Na tebya eto povesili?");
+    if (answer5==1) {
+        cycle();
+    }
+    else {
+        puts ("Sidi tiho");
+    }
+}
 
-                if (f==1) {
-                puts ("U menya dlya tebya plohie novosti");
-                int h=getYesNo("Mojesh svalit' vinu na drugogo?");
-                if (h==1) {
-                    puts("Net problem");
-                    count =1;
-                }
-                else {
-                    count =0;
-                }
-
-                }
-
-                else {
-                puts ("Sidi tiho");
-                puts ("Net problem!");
-
-                }
-
-            }
+int main(int argc, char *argv[]) {
+    int answer1 = getYesNo ("Yest problemi?");
+    if (answer1==1) {
+        int answer2 = getYesNo ("Ti tut zameshan?");
+        if (answer2==1) {
+            func1();
         }
-        int d=getYesNo("Kto-nibud ob etom znaet?");
-        if (d==1) {
-            puts ("U menya dlya tebya plohie novosti...");
-            int g=getYesNo("Mojesh svalit' venu na drugogo?");
-            if (g==1) {
-                puts("Net problem");
-            }
-            else {
-                //cikl while
-            }
+        else {
+            func2();
         }
     }
     else {
-        puts("Ne stoit bespokoitsya");
-        puts("Net problem");
+        puts ("Ne stoit bespokoitsya");
     }
-    printf ("%d\n", a);
-    return 0;
+    puts ("Net problem!");
 }
-
-
