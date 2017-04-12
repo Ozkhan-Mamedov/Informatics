@@ -1,6 +1,6 @@
 import math
 
-ans = int(input ("Nachalnaya sistema koordinat. \n 1)Pryamougolnaya 2)Cilindricheskaya 3)Sfericheskaya \n"))
+ans = int(input ("Nachalnaya sistema koordinat. \n1)Pryamougolnaya 2)Cilindricheskaya 3)Sfericheskaya \n"))
 x=0.0
 y=0.0
 z=0.0
@@ -68,7 +68,9 @@ def sf_to_cil (a, b, c) :
 
 if ans == 1 :
 	print ("Vi vibrali pryamougolnuyu sistemu koordinat")
-	x, y, z = input ("Vvedite koordinati:\n")
+	x = float(input ("Vvedite koordinatu x:\n"))
+	y = float(input ("Vvedite koordinatu y:\n"))
+	z = float(input ("Vvedite koordinatu z:\n"))
 	print ("Perevod v cilindricheskuyu sistemu koordinat")
 	pr_to_cil (x, y, z)
 	print ("Perevod v sfericheskuyu sistemu koordinat")
@@ -76,7 +78,9 @@ if ans == 1 :
 
 if ans == 2 :
 	print ("Vi vibrali cilindricheskuyu sistemu koordinat")
-	r, fi, h = input ("Vvedite koordinati:\n")
+	r = float(input ("Vvedite koordinatu r:\n"))
+	fi = float(input ("Vvedite koordinatu fi:\n"))
+	h = float(input ("Vvedite koordinatu h:\n"))
 	print ("Perevod v pryamougolnuyu sistemu koordinat")
 	cil_to_pr (r, fi, h)
 	print ("Perevod v sfericheskuyu sistemu koordinat")
@@ -84,7 +88,9 @@ if ans == 2 :
 
 if ans ==3 :
 	print ("Vi vibrali sfericheskuyu sistemu koordinat")
-	r, fi, theta = input ("Vvedite koordinati:\n")
+	r = float(input ("Vvedite koordinatu r:\n"))
+	fi = float(input ("Vvedite koordinatu fi:\n"))
+	theta = float(input ("Vvedite koordinatu theta:\n"))
 	print ("Perevod v pryamougolnuyu sistemu koordinat")
 	sf_to_pr (r, fi, theta)
 	print ("Perevod v cilindricheskuyu sistemu koordinat")
