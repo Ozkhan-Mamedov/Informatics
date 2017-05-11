@@ -44,6 +44,6 @@ for a in field2:
 		s += b;
 	print (s)
 
-#for a in range (1, len(field)-1):
+#for a in range (1, len(field)-1): 16x16
 #	for b in range (1, len(field[a])-1):
 #		field [a][b] = field2 [a][b]
